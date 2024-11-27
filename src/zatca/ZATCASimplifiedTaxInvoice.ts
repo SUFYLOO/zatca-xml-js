@@ -97,6 +97,9 @@ export class ZATCASimplifiedTaxInvoice {
         // Calc item subtotal
         let line_item_subtotal = 
             (line_item.tax_exclusive_price * line_item.quantity) - line_item_total_discounts;
+
+            // let tax_exclusive_price = (line_item_subtotal + line_item_total_discounts) / line_item.quantity;
+
         line_item_subtotal = parseFloat(line_item_subtotal.toFixedNoRounding(2))
 
         // Calc total taxes
